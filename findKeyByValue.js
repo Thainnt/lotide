@@ -1,12 +1,11 @@
 //IMPLEMENTATION
 const findKeyByValue = function (ob, val) {
   let result;
-  for (let prop in ob) {
-    if (ob.hasOwnProperty(prop)) {
-      if (ob[prop] === val) {
-        result = prop;
-      }
-    }
+  const keyList = Object.keys(ob);
+  for (let key of keyList) {
+    if (ob[key] === val) {
+    result = key;
+    }  
   }
   return result;
 }
