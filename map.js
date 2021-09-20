@@ -1,4 +1,4 @@
-//IMPLEMENTATION FUNCTION
+const assertArraysEqual = require('./assertArraysEqual');
 
 const map = function(array, callback) {
 
@@ -9,29 +9,7 @@ const map = function(array, callback) {
   return results;
 };
 
-//TEST FUNCTION 
-const eqArrays = function(ar1, ar2) {
-  if (ar1.length === ar2.length) {
-    for (let i = 0; i < ar1.length; i++) {
-      if(ar1[i] !== ar2[i]) {
-        return false;
-      }
-    }
-    return true;
-  } else {
-    return false;
-  }
-}
-
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`🌕Assertion Passed: ${actual} === ${expected}`);
-    return true;
-  } else {
-    console.log(`🌑Assertion Failed: ${actual} !== ${expected}`);
-    return false;
-  }
-};
+module.exports = map;
 
 // TEST CODE
 const words = ["ground", "control", "to", "major", "tom"];

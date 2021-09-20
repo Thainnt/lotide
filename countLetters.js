@@ -12,6 +12,7 @@ const countLetters = function (str) {
   return countResults;
 };
 
+module.exports = countLetters;
 
 //TEST FUNCTION
 

@@ -1,3 +1,5 @@
+const assertArraysEqual = require('./assertArraysEqual');
+
 //IMPLEMENTATION CODE
 
 const letterPositions = function(sentence) {
@@ -17,27 +19,7 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-//TEST FUNCTIONS
-const eqArrays = function(ar1, ar2) {
-  if (ar1.length === ar2.length) {
-    for (let i = 0; i < ar1.length; i++) {
-      if(ar1[i] !== ar2[i]) {
-        return false;
-      }
-    }
-    return true;
-  } else {
-    return false;
-  }
-}
-
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    return true;
-  } else {
-    return false;
-  }
-};
+module.exports = letterPositions;
 
 console.log(letterPositions("lighthouse in the house"));
 const str = "hello";
