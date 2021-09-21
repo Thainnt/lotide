@@ -1,5 +1,5 @@
 const { findKey } = require('.');
-const assertEqual = require('./assertEqual');
+// const assertEqual = require('./assertEqual');
 
 //IMPLEMENTATION
 const findKeyByValue = function (ob, val) {
@@ -14,24 +14,3 @@ const findKeyByValue = function (ob, val) {
 };
 
 module.exports = findKeyByValue;
-
-//TEST CODE
-const bestTVShowsByGenre = { 
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-
-const pets = {
-  dog: "Billy",
-  cat: "Kat",
-  hamster: "Ham",
-  bird: "Rid",
-  none: ""
-}
-assertEqual(findKeyByValue(pets, "Ham"), "hamster");
-assertEqual(findKeyByValue(pets, ""), "none");
-assertEqual(findKeyByValue(pets, "cat"), undefined);
